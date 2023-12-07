@@ -1,0 +1,90 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content_checkout %}
+     <div class="row">
+		<div class="col-lg-6">
+			<div class="box-element" id="form-wrapper">
+				
+					
+					<div id="shipping-info">
+						<hr>
+						<p>THÊM DỊCH VỤ</p>
+						<hr>
+						<div class="form-field">
+                            <label class="form-label" for="form3Example1cg"> Dịch vụ</label>
+							<input class="form-control" type="text" name="address" placeholder="Dịch vụ..">
+						</div>
+						<div class="form-field">
+                            <label class="form-label" for="form3Example1cg"> Nhân viên</label>
+							<input class="form-control" type="text" name="city" placeholder="Nhân viên  ..">
+						</div>
+                        <div class="form-field">
+                            <div>
+                            <label class="form-label" for="form3Example1cg"> Thời gian bắt đầu</label>
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  12
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">01</a></li>
+                                  <li><a class="dropdown-item" href="#">02</a></li>
+                                  <li><a class="dropdown-item" href="#">03</a></li>
+                                  <li><a class="dropdown-item" href="#">04</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    12
+                                  </a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">01</a></li>
+                                  <li><a class="dropdown-item" href="#">02</a></li>
+                                  <li><a class="dropdown-item" href="#">03</a></li>
+                                  <li><a class="dropdown-item" href="#">04</a></li>
+                                </ul>
+                            </div>
+                        </div> 
+                    
+						<div class="form-field">
+                            <label class="form-label" for="form3Example1cg"> Làm trong khoảng</label>
+							<input class="form-control" type="text" name="mobile" placeholder="Thời gian..">
+						</div>
+						<div class="form-field">
+                            <label class="form-label" for="form3Example1cg">Số lượng</label>
+							<input class="form-control" type="text" name="country" placeholder="Số lượng..">
+						</div>
+                        <div class="form-field">
+                            <label class="form-label" for="form3Example1cg">Giá</label>
+							<input class="form-control" type="text" name="country" placeholder="VNĐ..">
+						</div>
+					</div>
+
+					<hr>
+					<input id="form-button" class="btn btn-success btn-block" type="submit" value="Continue">
+				</form>
+			</div>
+
+			<br>
+			<div class="box-element hidden" id="payment-info">
+				<small>Paypal Options</small>
+			</div>
+			
+		</div>
+
+		<div class="col-lg-6">
+			<div class="box-element">
+				<a  class="btn btn-outline-dark" href="{% url 'cart' %}">&#x2190; Back to Cart</a>
+				<hr>
+				<h3>Order Summary</h3>
+				<hr>
+				<div class="cart-row">
+					<div style="flex:2"><img class="row-image" src="{% static 'app/images/placeholder.png' %}"></div>
+					<div style="flex:2"><p>Product 1</p></div>
+					<div style="flex:1"><p>$20.00</p></div>
+					<div style="flex:1"><p>x2</p></div>
+				</div>
+				<h5>Items:   2</h5>
+				<h5>Total:   $4</h5>
+			</div>
+		</div>
+	</div>
+{% endblock content_checkout %}

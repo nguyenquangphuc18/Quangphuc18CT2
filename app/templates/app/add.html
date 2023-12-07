@@ -1,0 +1,56 @@
+{% extends 'app/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        {% block add %}
+       <h3 class="text-center">{{department.name}}</h3>
+       <table class = "table table-bordered mt60">
+        
+            <thead class = "bg- darkgray text-bold td">
+                <tr>
+                    <td>STT</td>
+                    <td>Tên khách hàng</td>
+                    <td>SĐT*</td>
+                    <td>nhóm khách hàng</td>
+                    <td>Ngày sinh</td>
+                    <td>Email</td>
+                    <td>Địa Chỉ</td>
+                    <td>Ghi chú</td>
+              
+                </tr>
+            </thead>
+            <tbody>
+                {% for addkh in addkhs%}
+                <tr>
+                    <td>{{addkh.id}}</td>
+                    <td>{{addkh.name}}</td>
+                    <td>{{addkh.phone}}</td>
+                    <td>{{addkh.group}}</td>
+                    <td>{{addkh.date}}</td>
+                    <td>{{addkh.email}}</td>
+                    <td>{{addkh.address}}</td>
+                    <td>{{addkh.Note}}</td>
+                    
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>  
+         
+        <script src="" async defer></script>
+        {% endblock add %}
+    </body>
+</html>
